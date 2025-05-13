@@ -1,0 +1,10 @@
+^D:\MICROSOFT VS CODE\WORKSPACE\CMAKE-STUDY\03-MINIPROJECT-LIB\BUILD-VS\CMAKEFILES\002A884E10D680922D7EC4239E1FB586\GENERATE.STAMP.RULE
+setlocal
+D:\CMake\bin\cmake.exe "-SD:/Microsoft VS Code/workspace/cmake-study/03-miniproject-lib" "-BD:/Microsoft VS Code/workspace/cmake-study/03-miniproject-lib/build-vs" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Microsoft VS Code/workspace/cmake-study/03-miniproject-lib/build-vs/ComplexProject.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

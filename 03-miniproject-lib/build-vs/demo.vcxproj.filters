@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Microsoft VS Code\workspace\cmake-study\03-miniproject-lib\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Microsoft VS Code\workspace\cmake-study\03-miniproject-lib\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6E1453EB-4F97-348B-885C-0D4F132F6E64}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

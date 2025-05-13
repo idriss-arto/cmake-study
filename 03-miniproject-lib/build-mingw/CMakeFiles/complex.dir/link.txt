@@ -1,0 +1,2 @@
+D:\Dev-Cpp\MinGW64\bin\ar.exe qc libcomplex.a CMakeFiles/complex.dir/complex.cpp.obj
+D:\Dev-Cpp\MinGW64\bin\ranlib.exe libcomplex.a
