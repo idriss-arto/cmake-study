@@ -1,0 +1,2 @@
+D:/Microsoft VS Code/workspace/cmake-study/04-Variable/build-vs/CMakeFiles/ALL_BUILD.dir
+D:/Microsoft VS Code/workspace/cmake-study/04-Variable/build-vs/CMakeFiles/ZERO_CHECK.dir
