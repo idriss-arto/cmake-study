@@ -1,0 +1,3 @@
+D:/Microsoft VS Code/workspace/cmake-study/02-miniproject/build-vs/CMakeFiles/demo.dir
+D:/Microsoft VS Code/workspace/cmake-study/02-miniproject/build-vs/CMakeFiles/ALL_BUILD.dir
+D:/Microsoft VS Code/workspace/cmake-study/02-miniproject/build-vs/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,10 @@
+^D:\MICROSOFT VS CODE\WORKSPACE\CMAKE-STUDY\02-MINIPROJECT\CMAKELISTS.TXT
+setlocal
+D:\CMake\bin\cmake.exe "-SD:/Microsoft VS Code/workspace/cmake-study/02-miniproject" "-BD:/Microsoft VS Code/workspace/cmake-study/02-miniproject/build-vs" --check-stamp-file "D:/Microsoft VS Code/workspace/cmake-study/02-miniproject/build-vs/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
