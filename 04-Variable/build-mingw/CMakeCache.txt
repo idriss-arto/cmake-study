@@ -249,7 +249,7 @@ VariableLesson_IS_TOP_LEVEL:STATIC=ON
 VariableLesson_SOURCE_DIR:STATIC=D:/Microsoft VS Code/workspace/cmake-study/04-Variable
 
 //备注
-myVar4:STRING=cache variablr
+myVar4:STRING=new cache variable
 
 
 ########################
