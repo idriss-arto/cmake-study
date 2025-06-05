@@ -1,0 +1,2 @@
+D:/Microsoft VS Code/workspace/cmake-study/06-function/build-mingw/CMakeFiles/edit_cache.dir
+D:/Microsoft VS Code/workspace/cmake-study/06-function/build-mingw/CMakeFiles/rebuild_cache.dir

@@ -9,7 +9,7 @@ target_sources(demo PRIVATE main.cpp)
 
 
 # 添加库 target=complex
-add_library(complex STATIC)
+add_library(complex)
 target_sources(complex PRIVATE complex.cpp complex.h)
 
 # 链接库
