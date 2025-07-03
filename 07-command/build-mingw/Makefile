@@ -56,10 +56,10 @@ RM = D:\CMake\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\Microsoft VS Code\workspace\cmake-study\06-function"
+CMAKE_SOURCE_DIR = "D:\Microsoft VS Code\workspace\cmake-study\07-command"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\Microsoft VS Code\workspace\cmake-study\06-function\build-mingw"
+CMAKE_BINARY_DIR = "D:\Microsoft VS Code\workspace\cmake-study\07-command\build-mingw"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,16 +86,16 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Microsoft VS Code\workspace\cmake-study\06-function\build-mingw\CMakeFiles" "D:\Microsoft VS Code\workspace\cmake-study\06-function\build-mingw\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Microsoft VS Code\workspace\cmake-study\07-command\build-mingw\CMakeFiles" "D:\Microsoft VS Code\workspace\cmake-study\07-command\build-mingw\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Microsoft VS Code\workspace\cmake-study\06-function\build-mingw\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Microsoft VS Code\workspace\cmake-study\07-command\build-mingw\CMakeFiles" 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Microsoft VS Code\workspace\cmake-study\06-function\build-mingw\CMakeFiles" "D:\Microsoft VS Code\workspace\cmake-study\06-function\build-mingw\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Microsoft VS Code\workspace\cmake-study\07-command\build-mingw\CMakeFiles" "D:\Microsoft VS Code\workspace\cmake-study\07-command\build-mingw\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Microsoft VS Code\workspace\cmake-study\06-function\build-mingw\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Microsoft VS Code\workspace\cmake-study\07-command\build-mingw\CMakeFiles" 0
 .PHONY : codegen
 
 # The main clean target
@@ -122,6 +122,19 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named Mytarget
+
+# Build rule for target.
+Mytarget: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Mytarget
+.PHONY : Mytarget
+
+# fast build rule for target.
+Mytarget/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mytarget.dir\build.make CMakeFiles/Mytarget.dir/build
+.PHONY : Mytarget/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -131,6 +144,7 @@ help:
 	@echo ... codegen
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Mytarget
 .PHONY : help
 
 

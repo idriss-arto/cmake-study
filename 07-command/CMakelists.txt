@@ -1,0 +1,206 @@
+cmake_minimum_required(VERSION 3.31)
+
+# 禁用编译器检测输出
+set(CMAKE_SUPPRESS_DEVELOPER_WARNINGS 1 CACHE INTERNAL "No dev warnings")
+set(CMAKE_C_COMPILER_WORKS 1)
+set(CMAKE_CXX_COMPILER_WORKS 1)
+
+# 项目名称
+project(Normal_Command VERSION 0.1.0 LANGUAGES CXX)
+
+# # 输出分隔线，便于区分不同示例
+# function(print_separator)
+#     message(STATUS "----------------------------------------")
+# endfunction()
+
+# # list
+# set(listvar a b c)
+# ## 获取长度
+# print_separator()
+# list(LENGTH listvar listLenth)
+# message("listLength = " ${listLenth})
+# ## 获取指定下标对应值
+# print_separator()
+# list(GET listvar 0 firstItem)
+# message("firstItem : ${firstItem}")
+# ## 向末尾追加元素
+# print_separator()
+# list(APPEND listvar d)
+# foreach(v IN LISTS listvar)
+#     message("${v}")
+# endforeach()
+# ## 使用连接符链接元素
+# print_separator()
+# list(JOIN listvar "-" joinResult)
+# message("joinResult : ${joinResult}")
+
+# # string
+# ## 1. LENGTH - 获取字符串长度
+# print_separator()
+# message(STATUS "示例1: LENGTH - 获取字符串长度")
+# string(LENGTH "Hello World" len)
+# message(STATUS "字符串: 'Hello World'")
+# message(STATUS "预期输出: 11")
+# message(STATUS "实际输出: ${len}")
+
+# ## 2. SUBSTRING - 提取子字符串
+# print_separator()
+# message(STATUS "示例2: SUBSTRING - 提取子字符串")
+# string(SUBSTRING "Hello World" 6 5 substr_result)
+# message(STATUS "字符串: 'Hello World'")
+# message(STATUS "预期输出: World")
+# message(STATUS "实际输出: ${substr_result}")
+
+# ## 3. REPLACE - 替换字符串
+# print_separator()
+# message(STATUS "示例3: REPLACE - 替换字符串")
+# string(REPLACE "World" "CMake" replace_result "Hello World")
+# message(STATUS "原始字符串: 'Hello World'")
+# message(STATUS "预期输出: Hello CMake")
+# message(STATUS "实际输出: ${replace_result}")
+
+# ## 4. REGEX - 正则表达式操作
+# print_separator()
+# message(STATUS "示例4: REGEX - 正则表达式操作")
+
+# ### 4.1 MATCH - 匹配正则表达式
+# message(STATUS "  4.1 MATCH - 匹配正则表达式")
+# string(REGEX MATCH "W.*d" regex_match_result "Hello World")
+# message(STATUS "  字符串: 'Hello World'")
+# message(STATUS "  预期输出: World")
+# message(STATUS "  实际输出: ${regex_match_result}")
+
+# ### 4.2 REPLACE - 正则替换
+# message(STATUS "  4.2 REPLACE - 正则替换")
+# string(REGEX REPLACE "[a-z]" "*" regex_replace_result "Hello World")
+# message(STATUS "  字符串: 'Hello World'")
+# message(STATUS "  预期输出: H**** W****")
+# message(STATUS "  实际输出: ${regex_replace_result}")
+
+# ### 4.3 MATCHALL - 匹配所有结果
+# message(STATUS "  4.3 MATCHALL - 匹配所有结果")
+# string(REGEX MATCHALL "[A-Z]" regex_matchall_result "Hello World")
+# message(STATUS "  字符串: 'Hello World'")
+# message(STATUS "  预期输出: H;W")
+# message(STATUS "  实际输出: ${regex_matchall_result}")
+
+# ## 5. TOUPPER/TOLOWER - 大小写转换
+# print_separator()
+# message(STATUS "示例5: TOUPPER/TOLOWER - 大小写转换")
+# string(TOUPPER "hello" upper_result)
+# string(TOLOWER "WORLD" lower_result)
+# message(STATUS "原始字符串: 'hello' 和 'WORLD'")
+# message(STATUS "预期输出: 大写: HELLO, 小写: world")
+# message(STATUS "实际输出: 大写: ${upper_result}, 小写: ${lower_result}")
+
+# ## 6. STRIP - 去除首尾空白字符
+# print_separator()
+# message(STATUS "示例6: STRIP - 去除首尾空白字符")
+# string(STRIP "   Hello   " strip_result)
+# message(STATUS "原始字符串: '   Hello   '")
+# message(STATUS "预期输出: Hello")
+# message(STATUS "实际输出: ${strip_result}")
+
+# ## 7. CONCAT - 连接多个字符串
+# print_separator()
+# message(STATUS "示例7: CONCAT - 连接多个字符串")
+# string(CONCAT concat_result "Hello" " " "World" "!")
+# message(STATUS "预期输出: Hello World!")
+# message(STATUS "实际输出: ${concat_result}")
+
+# ## 8. FIND - 查找子字符串位置
+# print_separator()
+# message(STATUS "示例8: FIND - 查找子字符串位置")
+# string(FIND "Hello World" "World" find_pos)
+# message(STATUS "字符串: 'Hello World'")
+# message(STATUS "预期输出: 6")
+# message(STATUS "实际输出: ${find_pos}")
+
+# ## 9. MAKE_C_IDENTIFIER - 转换为C标识符
+# print_separator()
+# message(STATUS "示例9: MAKE_C_IDENTIFIER - 转换为C标识符")
+# string(MAKE_C_IDENTIFIER "my-variable" c_identifier_result)
+# message(STATUS "原始字符串: 'my-variable'")
+# message(STATUS "预期输出: my_variable")
+# message(STATUS "实际输出: ${c_identifier_result}")
+
+# ## 10. RANDOM - 生成随机字符串
+# print_separator()
+# message(STATUS "示例10: RANDOM - 生成随机字符串")
+# string(RANDOM LENGTH 10 ALPHABET abcdefghijklmnopqrstuvwxyz random_result)
+# message(STATUS "预期输出: 10位小写字母随机字符串")
+# message(STATUS "实际输出: ${random_result}")
+
+# ## 11. TIMESTAMP - 获取时间戳
+# print_separator()
+# message(STATUS "示例11: TIMESTAMP - 获取时间戳")
+# string(TIMESTAMP timestamp_result "%Y-%m-%d %H:%M:%S")
+# message(STATUS "预期输出: 当前时间 (格式: YYYY-MM-DD HH:MM:SS)")
+# message(STATUS "实际输出: ${timestamp_result}")
+
+# ## 12. ASCII - 字符与ASCII码转换
+# print_separator()
+# message(STATUS "示例12: ASCII - 字符与ASCII码转换")
+# string(ASCII 65 66 67 ascii_result)
+# message(STATUS "输入ASCII码: 65 66 67")
+# message(STATUS "预期输出: ABC")
+# message(STATUS "实际输出: ${ascii_result}")
+# print_separator()
+
+# # math
+# ## 不使用math
+# set(myvar 1+2*6/2)
+# message("myvar = ${myvar}")
+# ## 使用math
+# math(EXPR a "1+2*6/2")
+# math(EXPR b ${a}*3)
+# message("a=${a}\nb=${b}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 生成器表达式
+## 无效表达
+message($<1:hello>)
+message($<CONFIG>)
+## 结果输出到一个文件
+# add_executable(myApp main.cpp)  # 假设使用main.cpp作为源文件
+# file(GENERATE OUTPUT generatorExample.txt CONTENT "platform = $<PLATFORM_ID>" TARGET myApp)
+file(GENERATE OUTPUT generatorExample.txt CONTENT "platform = $<PLATFORM_ID>")
+## 设置自定义目标，在命令行输出
+add_custom_target(Mytarget ALL COMMAND ${CMAKE_COMMAND} -E echo "platform = $<PLATFORM_ID>")
+## 条件判断
+### 条件判断中的条件只能是0或者1，其他值会报错
+### 如 set(test_var off) 就不行，但可结合bool表达式<BOOL:value>
+set(test_var 0)
+file(GENERATE OUTPUT generatorExample1.txt CONTENT "res1 = $<IF:${test_var},hello,bye>")
+set(test_var off)
+file(GENERATE OUTPUT generatorExample2.txt CONTENT "res2 = $<IF:$<BOOL:${test_var}>,hello,bye>")

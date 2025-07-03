@@ -8,7 +8,7 @@ add_executable(demo)
 target_sources(demo PRIVATE main.cpp)
 
 
-# 添加库 target=complex
+# 添加库 target=complex，生成libcomplex.a(linux)或者comple.lib(MSVC)
 add_library(complex)
 target_sources(complex PRIVATE complex.cpp complex.h)
 

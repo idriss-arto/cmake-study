@@ -53,20 +53,20 @@ RM = D:\CMake\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\Microsoft VS Code\workspace\cmake-study\06-function"
+CMAKE_SOURCE_DIR = "D:\Microsoft VS Code\workspace\cmake-study\07-command"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\Microsoft VS Code\workspace\cmake-study\06-function\build-mingw"
+CMAKE_BINARY_DIR = "D:\Microsoft VS Code\workspace\cmake-study\07-command\build-mingw"
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/Mytarget.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen:
+codegen: CMakeFiles/Mytarget.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -74,8 +74,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean:
+clean: CMakeFiles/Mytarget.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Mytarget.dir
+
+# All Build rule for target.
+CMakeFiles/Mytarget.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mytarget.dir\build.make CMakeFiles/Mytarget.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mytarget.dir\build.make CMakeFiles/Mytarget.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Microsoft VS Code\workspace\cmake-study\07-command\build-mingw\CMakeFiles" --progress-num= "Built target Mytarget"
+.PHONY : CMakeFiles/Mytarget.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Mytarget.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Microsoft VS Code\workspace\cmake-study\07-command\build-mingw\CMakeFiles" 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Mytarget.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Microsoft VS Code\workspace\cmake-study\07-command\build-mingw\CMakeFiles" 0
+.PHONY : CMakeFiles/Mytarget.dir/rule
+
+# Convenience name for target.
+Mytarget: CMakeFiles/Mytarget.dir/rule
+.PHONY : Mytarget
+
+# codegen rule for target.
+CMakeFiles/Mytarget.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mytarget.dir\build.make CMakeFiles/Mytarget.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Microsoft VS Code\workspace\cmake-study\07-command\build-mingw\CMakeFiles" --progress-num= "Finished codegen for target Mytarget"
+.PHONY : CMakeFiles/Mytarget.dir/codegen
+
+# clean rule for target.
+CMakeFiles/Mytarget.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Mytarget.dir\build.make CMakeFiles/Mytarget.dir/clean
+.PHONY : CMakeFiles/Mytarget.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

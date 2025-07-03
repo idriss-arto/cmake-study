@@ -32,7 +32,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/CMake/share/cmake-3.31/Modules/Platform/Windows-windres.cmake"
   "D:/CMake/share/cmake-3.31/Modules/Platform/Windows.cmake"
   "D:/CMake/share/cmake-3.31/Modules/Platform/WindowsPaths.cmake"
-  "D:/Microsoft VS Code/workspace/cmake-study/06-function/CMakeLists.txt"
+  "D:/Microsoft VS Code/workspace/cmake-study/07-command/CMakeLists.txt"
   "CMakeFiles/3.31.8/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.8/CMakeRCCompiler.cmake"
   "CMakeFiles/3.31.8/CMakeSystem.cmake"
@@ -46,9 +46,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "generatorExample.txt"
+  "generatorExample1.txt"
+  "generatorExample2.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/Mytarget.dir/DependInfo.cmake"
   )
