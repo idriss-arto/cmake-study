@@ -1,0 +1,2 @@
+D:\Dev-Cpp\MinGW64\bin\ar.exe qc libShape.a CMakeFiles/Shape.dir/src/Circle.cpp.obj CMakeFiles/Shape.dir/src/Rectangle.cpp.obj
+D:\Dev-Cpp\MinGW64\bin\ranlib.exe libShape.a

@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+      "*.twig": "php",
+      "iostream": "cpp"
+    },
+    "cmake.debugConfig": {
+        "args" : [
+            "c",
+            "10"
+        ]
+    },
+    "cmake."
+}

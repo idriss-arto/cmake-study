@@ -1,0 +1,6 @@
+D:/Microsoft VS Code/workspace/cmake-study/08-myproject/build/CMakeFiles/DemoAPP.dir
+D:/Microsoft VS Code/workspace/cmake-study/08-myproject/build/CMakeFiles/edit_cache.dir
+D:/Microsoft VS Code/workspace/cmake-study/08-myproject/build/CMakeFiles/rebuild_cache.dir
+D:/Microsoft VS Code/workspace/cmake-study/08-myproject/build/Shape/CMakeFiles/Shape.dir
+D:/Microsoft VS Code/workspace/cmake-study/08-myproject/build/Shape/CMakeFiles/edit_cache.dir
+D:/Microsoft VS Code/workspace/cmake-study/08-myproject/build/Shape/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,10 @@
+add_library(Shape)
+target_sources(Shape
+    PRIVATE
+        src/Circle.cpp
+        src/Rectangle.cpp
+)
+target_include_directories(Shape
+    PUBLIC
+        include
+)
